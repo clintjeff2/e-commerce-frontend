@@ -1,0 +1,117 @@
+:root {
+	--primary-color: #1e90ff;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey-light: #d4d4d4;
+	--color-grey: #888;
+}
+
+html {
+	font-size: 20px;
+	font-family: sans-serif;
+}
+body {
+	margin: 0;
+}
+
+/* NAVIGATION BAR */
+.nav-container {
+	border-bottom: 1px solid var(--color-grey-light);
+}
+.nav-bar {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	width: 85%;
+	margin: 0 auto;
+	padding: 15px 0;
+
+	.logo {
+		font-size: 26px;
+		color: var(--primary-color);
+		font-weight: bolder;
+	}
+
+	.contact {
+		margin-right: auto;
+	}
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		color: var(--color-black);
+
+		button {
+			background-color: var(--color-white);
+			border: 1px solid var(--color-grey-light);
+			padding: 10px 15px;
+			border-radius: 4px;
+		}
+
+		.signup {
+			color: var(--color-white);
+			background-color: var(--primary-color);
+		}
+	}
+}
+
+/* HOME PAGE */
+.home {
+	.home-title,
+	.home-description {
+		text-align: center;
+	}
+
+	.home-title {
+		font-size: 38px;
+	}
+	.home-description {
+		color: var(--color-grey);
+	}
+
+	form {
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		gap: 14px;
+
+		input {
+			flex: 1;
+			border: 1px solid var(--color-grey-light);
+			border-radius: 5px;
+			padding: 0 15px;
+		}
+
+		input:focus {
+			outline: 2px solid var(--primary-color);
+		}
+
+		button {
+			background-color: var(--color-white);
+			border: 1px solid var(--color-grey-light);
+			padding: 8px 12px;
+			border-radius: 5px;
+		}
+	}
+
+	.tab {
+		width: 80%;
+		margin: 0 auto;
+		/* border: 1px solid red; */
+		margin-top: 40px;
+		display: flex;
+		align-items: center;
+		background-color: var(--color-grey-light);
+		padding: 3px 5px;
+
+		span {
+			width: 20%;
+			text-align: center;
+			padding: 8px;
+		}
+		.current {
+			background-color: var(--color-white);
+			border-radius: 6px;
+		}
+	}
+}

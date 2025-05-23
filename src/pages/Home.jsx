@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import StoreCard from '../components/StoreCard';
+import { AppContext } from '../context/AppProvider';
 
 function Home() {
+	const context = useContext(AppContext);
 	const [currentTab, setCurrentTab] = useState('all');
+
+	console.log(context);
+
+	useEffect(() => {
+		context.getAllStores();
+	}, []);
 	return (
 		<div className="home">
 			<h2 className="home-title">Explore Stores</h2>
@@ -48,10 +57,20 @@ function Home() {
 					Electronics
 				</span>
 			</div>
+
+			<div className="stores">
+				{context.allStores.map((el) => (
+					<StoreCard
+						logo={el.logo}
+						description={el.description}
+						name={el.name}
+						location={el.location}
+						category={el.category}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }
 
 export default Home;
-const name = 'my names';
-console.log(`${name === 'my names' ? 'John is my name' : 'Eric'}`);

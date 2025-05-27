@@ -66,6 +66,7 @@ function Home() {
 						name={el.name}
 						location={el.location}
 						category={el.category}
+						id={el._id}
 					/>
 				))}
 			</div>
